@@ -12,7 +12,7 @@ void setup() {
     return;
   }
   
-  Serial.println("Type your name, surname, age, birthdate, phone and press Enter:");
+  Serial.println("Type your name, surname, age, birthdate(yyyy-mm-dd), phone and press Enter:");
 }
 
 void loop() {
@@ -34,7 +34,9 @@ void loop() {
     // Write data to the file
     file.print(data);
     file.close(); // Close the file
-    
+
+    Serial.println("your personal information are: ");
+    Serial.println(data);
     Serial.println("Data written to file successfully!");
   }
 }
